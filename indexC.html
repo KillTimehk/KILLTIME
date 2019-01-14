@@ -11,15 +11,14 @@
   <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js" integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k" crossorigin="anonymous"></script>
   <style>
     .navlogo{
-    width: 2%;
+    width: 30px;
     position:relative;
     text-align: center;
     left: 5px;
     margin-right: 20px;
     }
-    .lang{
-    position: absolute;
-    right: 20px;
+    .jumboleft {
+      padding-bottom: 20px;
     }
     .language {
     color:inherit;
@@ -47,39 +46,38 @@
     }
     #jumbotronlogo {
     width:150px;
-    float:right;
-    top:10%;
+    position: relative;
+    left: 25%;
     }
     #jumbonamelogo {
-    width: 50%;
+    width: 25rem;
     }
     #container {
     padding-top: 10px;
     }
     #func {
     text-align: center;
-    width: 40%;
+    width: 60%;
     margin: 10px auto 100px auto;
     }
     .funcexplain {
     text-align: justify;
-    margin-left: 200px;
     }
     .ss {
     width: 150px;
-    float: left;
+    padding-bottom: 10px;
     }
     .sharing {
     margin: 70px auto 0 auto;
-    line-height: 4;
+    line-height: 3;
     }
     .giving {
     margin: 70px auto 0 auto;
-    line-height: 4;
+    line-height: 3;
     }
     .ex {
     margin: 70px auto 0 auto;
-    line-height: 4;
+    line-height: 3;
     }
     .funchr {
     border-style: dotted none none none;
@@ -112,71 +110,92 @@
     font-size: 0.75rem;
     margin: 20px 0;
     }
-</style>
+  </style>
   <script type="text/javascript">
     window.alert("請使用電腦開啟以獲得更佳的瀏覽體驗");
   </script>
 </head>
 
 <body>
-  <nav class="navbar navbar-expand-lg navbar-light bg-light" style="position: fixed; top: 0;">
+  <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top">
     <img class="navlogo" src="images/logo1.png" alt="KILLTIME">
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarTogglerDemo03" aria-expanded="false" aria-label="Toggle navigation">
-       <span class="navbar-toggler-icon"></span>
+      <span class="navbar-toggler-icon"></span>
     </button>
     <div class="collapse navbar-collapse" id="navbarNav">
       <ul class="navbar-nav">
         <li class="nav-item active">
-          <a class="nav-link" href="index.html">主頁 <span class="sr-only">(current)</span></a>
+          <a class="nav-link" href="#">主頁</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="#funcs">功能</a>
+          <a class="nav-link" href="#scroll">功能</a>
         </li>
         <li class="nav-item">
           <a class="nav-link" href="teamC.html">我們的團隊</a>
         </li>
       </ul>
       <table class="ml-auto">
-          <tbody><tr><td class="nav-item">
-            <a href="index.html" class="language">English</a>
-          </td>
-          <td class="nav-item">
-            <a href="indexC.html" class="language">中文</a>
-          </td>
-        </tr></tbody></table>
+        <tbody>
+          <tr>
+            <td class="nav-item">
+              <a href="index.html" class="language">English</a>
+            </td>
+            <td class="nav-item">
+              <a href="indexC.html" class="language">中文</a>
+            </td>
+          </tr>
+        </tbody>
+      </table>
     </div>
   </nav>
   <div class="jumbotron">
-    <img id="jumbotronlogo" src="images/app1.png" alt="">
-    <img id="jumbonamelogo" src="images/namelogo.png" alt="">
-    <p class="lead">天地堂是一個讓<span class="yellowtag">大專學生</span>更<span class="redtag">有效地運用時間</span>的<span class="bluetag">平台</span>。</p>
-
-    <p>我們歡迎你加入此平台並接觸超過<span class="redtag"><em>290,000</em></span>名香港大專學生。</p>
-    <a class="btn btn-primary btn-lg" href="docs/天地堂.pdf" role="button">詳細資料</a>
+    <div class="row">
+      <div class="col-lg-8 jumboleft">
+        <img id="jumbonamelogo" src="images/namelogo.png" alt="">
+        <p class="lead">天地堂是一個讓<span class="redtag">大專學生</span>更<span class="yellowtag">有效地運用時間</span>的<span class="bluetag">平台</span>。</p>
+        <p>我們歡迎你加入此平台並接觸超過<span class="redtag"><em>290,000</em></span>名香港大專學生。</p>
+        <a class="btn btn-primary btn-lg" href="docs/天地堂.pdf" role="button">詳細資料</a>
+      </div>
+      <div class="col-lg-4">
+        <img id="jumbotronlogo" src="images/app1.png" alt="">
+      </div>
+    </div>
   </div>
-  <hr class="my-4">
+  <hr class="my-4" id="scroll">
   <div id="container">
     <!-- Example row of columns -->
     <div id="func">
-      <div class="sharing">
-        <img class="ss" src="images/sharingss.png" alt="">
-        <h2 class="bluetag">分享</h2>
-        <p class="funcexplain">學生能發放相片和短片到手機應用程式。他們不僅能分享自己的生活，還能在其他學生的分享中獲得消磨時間的好提議。
-          <br>有別於其他社交平台，學生能以匿名的方式去發放。而他們所發放的照片和短片都會保留在他們的個人帳戶中。</p>
-        <hr class="funchr">
+      <div class="row sharing">
+        <div class="col-lg-4">
+          <img class="ss" src="images/sharingss.png" alt="">
+        </div>
+        <div class="col-lg-8">
+          <h2 class="bluetag">分享</h2>
+          <p class="funcexplain">學生能發放相片和短片到手機應用程式。他們不僅能分享自己的生活，還能在其他學生的分享中獲得消磨時間的好提議。
+            <br>有別於其他社交平台，學生能以匿名的方式去發放。而他們所發放的照片和短片都會保留在他們的個人帳戶中。</p>
+          <hr class="funchr">
+        </div>
       </div>
-      <div class="giving">
-        <img class="ss" src="images/givingss.png" alt="">
-        <h2 class="redtag">給予</h2>
-        <p class="funcexplain">這個功能是用作配對有空閒時間的的學生，以及需要幫助的學生。
-          <br>
-          學生能透過手機應用程式尋求協助，以及伸出援手。尋求協助得學生可就學術或其他，兩個類別發出請求。他們需要清楚表明協助的內容以及地點。</p>
-        <hr class="funchr">
+      <div class="row giving">
+        <div class="col-lg-4">
+          <img class="ss" src="images/givingss.png" alt="">
+        </div>
+        <div class="col-lg-8">
+          <h2 class="redtag">給予</h2>
+          <p class="funcexplain">這個功能是用作配對有空閒時間的的學生，以及需要幫助的學生。
+            <br>
+            學生能透過手機應用程式尋求協助，以及伸出援手。尋求協助得學生可就學術或其他，兩個類別發出請求。他們需要清楚表明協助的內容以及地點。</p>
+          <hr class="funchr">
+        </div>
       </div>
-      <div class="ex">
-        <img class="ss" src="images/exss.png" alt="">
-        <h2 class="yellowtag">體驗</h2>
-        <p class="funcexplain">學生能尋找提供學生優惠的商店或地方，及透過手機應用程式以確定學生身分並獲得優惠。</p>
+      <div class="row ex">
+        <div class="col-lg-4">
+                  <img class="ss" src="images/exss.png" alt="">
+        </div>
+        <div class="col-lg-8">
+          <h2 class="yellowtag">體驗</h2>
+          <p class="funcexplain">學生能尋找提供學生優惠的商店或地方，及透過手機應用程式以確定學生身分並獲得優惠。</p>
+        </div>
       </div>
     </div>
   </div>
